@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Analyzing Pitch Selection with Baseball pitchF/X Data</title>
+  <link rel="stylesheet" type="text/css" href="finalproject.css">
+</head>
+
+<body>
+	<header>
+		<img class= "headerimg", src= "images/vintage_bats.jpg" alt="Baseball in the Grass">
+		<div class="mainheader">
+			<h2>Analyzing Pitch Selection Using Baseball's pitchF/X Data</h2>
+		</div>
+		<div class="mainheader2">
+			<h2>Analyzing Pitch Selection Using</h2> <h2>Baseball's pitchF/X Data</h2>
+		</div>
+	</header>
+	
+    <nav id="navigation" role="navigation">
+      <ul>
+        <li><a href="index.html">Abstract</a></li>
+        <li class="active"><a href="data.html">Data</a></li>
+		<li><a href="Model.html">Model</a></li>
+		<li><a href="results.html">Results</a></li>
+		<li><a href="references.html">References</a></li>
+		<li><a href="about_us.html">About Us</a></li>
+      </ul>
+    </nav>
+	<br>
+	<h1 id="datahead" role="banner">About the Data</h1>
+	<br>
+	<div id="datadiv" role="main">
+		<h2>Collection and Manipulation of Data</h2>
+		<p>In order to fit the model, we used data gathered from Major League Baseball's PITCHf/x System. PITCHf/x is a pitch 
+			tracking system that has been in use since about 2006. Two cameras are set up in every MLB stadium, and they are 
+			used to track the speed, break, spin, and location of the baseball for every single pitch thrown in a season. 
+			<br><br>We collected data using <a href="http://baseballsavant.com/pitchfx_search.php" target="_blank">Baseball 
+			Savant’s PITCHf/x search tool.</a> We downloaded the data for every pitch 
+			thrown in the 2014 season separated by batter handedness. We then added several columns to the data set in order to 
+			get a batter profile. These extra columns included batter handedness, K%, BB%, and HR%. K%, BB%, and HR% measure 
+			the rate of strikeouts, walks, and homeruns per plate appearance respectively. We decided that to get a more 
+			accurate picture of a batter's profile we should use historical data ranging back three seasons. In order to 
+			calculate these rates, we downloaded PITCHf/x data for the 2011-2013 seasons and then calculated each batter's 
+			cumulative rates. We then attached these final rates to all of their 2014 plate appearances to finalize our data 
+			fame .</p><br><br>
+			
+		<h2>Fielding Independant Pitching</h2>
+		<p>	One of the formulas commonly associated with the sabermetric movement is Fielding Independent Pitching (FIP). The 
+			formula derived by Tom Tango is based on the idea that there are only three true outcomes: walk, strikeout, and 
+			homerun. These outcomes are the only ones that are entirely dependent upon the hitter and the pitcher. These events 
+			do not rely on any other members of the defensive team. Because we isolated our input variables to only include 
+			pitcher and batter stats, we decided it was appropriate to apply this concept when predicting which outcomes are 
+			likely to happen.</p>
+			
+	</div>
+			
+
+		
+	
+
+	<footer role="contentinfo">
+		<hr>
+		<br>
+		<p>Prepared for the 2015 College of Science Joint Annual Meeting</p>
+		<p>University of Notre Dame</p>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+		<script type="text/javascript" src="finalproject.js"></script>
+	</footer>		
+</body>

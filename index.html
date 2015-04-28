@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Analyzing Pitch Selection with Baseball pitchF/X Data</title>
+  <link rel="stylesheet" type="text/css" href="finalproject.css">
+</head>
+
+<body>
+	<header>
+		<img class= "headerimg", src= "images/baseball_cover2.jpg" alt="Baseball in the Grass">
+		<div class="mainheader">
+			<h2>Analyzing Pitch Selection Using Baseball's pitchF/X Data</h2>
+		</div>
+		<div class="mainheader2">
+			<h2>Analyzing Pitch Selection Using</h2> <h2>Baseball's pitchF/X Data</h2>
+		</div>
+	</header>
+	
+    <nav id="navigation" role="navigation">
+      <ul>
+        <li class="active"><a href="index.html">Abstract</a></li>
+        <li><a href="data.html">Data</a></li>
+		<li><a href="Model.html">Model</a></li>
+		<li><a href="results.html">Results</a></li>
+		<li><a href="references.html">References</a></li>
+		<li><a href="about_us.html">About Us</a></li>
+      </ul>
+    </nav>
+	
+	<div id="abstract" role="main">
+		<div id="ahead" role="banner">
+		<h1>Predicting Pitch Outcomes Based on Batter and Pitcher Profiles</h1>
+		</div>
+		
+		<div id="authorsabstract">
+			<h2>Authors: James Schuster and Joseph Germino</h2>
+			<h2>Advisor: James Delaney</h2></div>
+		
+		<br>
+		
+		<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;In baseball, one of the most common strategic decisions that must be made 		throughout the game is determining which pitch to throw in which situation. Teams spend millions of dollars each 		year on scouting reports to determine a specific hitter’s weaknesses and strengths and the best approach when 		facing them at the plate. We aim to develop a computer model that can predict the likelihood of particular 		outcomes and decrease the necessary spending for such scouting reports. Using PITCHf/x data, we will develop batter 		and pitcher profiles using statistics, such as handedness, strikeout percentage, homerun percentage, contact 		percentage, and other measures of plate discipline, and determine how these batters usually perform against 		pitches with particular movement in a particular location. We will use all of the player profile statistics and 		pitch profile statistics as inputs in a logistic regression model. The model will then determine the probability 		of particular outcomes such as strike, ball, contact, and homerun. Our definitions of these outcomes are 		all-inclusive and mutually exclusive. Once a model is obtained, we hope to optimize the model to find the ideal 		location to throw a particular pitch in a given situation. A successful model could help in developing future 		scouting reports for baseball teams.
+		</p>
+		
+	</div>
+	
+	<div id="pitch">
+		<img id="pitcher" src="images/baseball-pitcher.png" alt="The Pitcher">
+		<img id="catcher" src="images/baseball-catcher-hi.png" alt="The Catcher">
+		<img id="baseball" src="images/baseball.png" alt="The Baseball">
+		<br><br><br>
+	</div>
+	
+	<div id="buttondiv" role="contentinfo">
+	<button id="pitchbutton" type="button">Throw a Pitch</button>
+	<button id="backbutton" type="button">Reset</button>
+	</div>
+	<br>
+	<footer>
+		<hr>
+		<br>
+		<p>Prepared for the 2015 College of Science Joint Annual Meeting</p>
+		<p>University of Notre Dame</p>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>	
+		<script type="text/javascript" src="finalproject.js"></script>
+	</footer>		
+</body>

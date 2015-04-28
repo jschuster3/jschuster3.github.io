@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Analyzing Pitch Selection with Baseball pitchF/X Data</title>
+  <link rel="stylesheet" type="text/css" href="finalproject.css">
+</head>
+
+<body>
+	<header>
+		<img class= "headerimg", src= "images/baseball-glove.jpg" alt="Baseball in a glove">
+		<div class="mainheader">
+			<h2>Analyzing Pitch Selection Using Baseball's pitchF/X Data</h2>
+		</div>
+		<div class="mainheader2">
+			<h2>Analyzing Pitch Selection Using</h2> <h2>Baseball's pitchF/X Data</h2>
+		</div>
+	</header>
+	
+    <nav id="navigation" role="navigation">
+      <ul>
+        <li><a href="index.html">Abstract</a></li>
+        <li><a href="data.html">Data</a></li>
+		<li><a href="Model.html">Model</a></li>
+		<li><a href="results.html">Results</a></li>
+		<li class="active"><a href="references.html">References</a></li>
+		<li><a href="about_us.html">About Us</a></li>
+      </ul>
+    </nav>
+	<br>
+	<h1 id="refhead" role="banner">Working with our Model</h1>
+	
+	<main id="refmaincontent" role="main">
+		
+		<div id="strikezone">
+			<h2>The Strike Zone</h2>
+			<p> The first thing that we need to discuss so that we may begin working with the fitted model is defining the
+				 strike zone. The Official Rulebook of Major League Baseball defines the strike zone as follows:</p> 
+				 <blockquote cite="http://mlb.mlb.com/mlb/official_info/umpires/strike_zone.jsp">"The Strike Zone is that 
+				 space over home plate which is between the batter's armpits and the top of his knees when he assumes his 
+				 natural stance."</blockquote> 
+				 <p>Therefore, to quantify the strike zone numerically we must look at the pitchF/X data. 
+				 We started by noticing that the strike zone is 17 inches wide. So taking into account that the pitchFX 
+				 system catagorizes everything in relation to the center of the plate, we deifined the horizontal size of 
+				 the strike zone to be any pitch with a horizontal location within [-0.708,0,708]. To quantify the strike 
+				 zone vertically we looked at all the data and vertically quantified the strike zone to start at the 
+				 point in which the umpire consistantly called more strikes than balls and end at the location in which 
+				 the umpire quantified more pitches to that location as balls than strikes. Doing this we came up with a 
+				 strikezone size as any pitch with a vertical location within [1.8,3.7]. Therefore our finalized Strike 
+				 Zone is any pitch that has a horizontal location within [-0.708,0.708] and a vertical location within 
+				 [1.8,3.7].</p>
+			<p> We then broke the strike zone up into nine zones where zone one includes those pitches up an in to a right 
+				handed hitter and zone three includes those pitches up and in to right handed hitter. Additionally zone 5 
+				quantifies those pitches right down the middle of the plate and belt high, where zone 7 quantifies those 
+				pitches down and in to a rightie and zone 9 quantifies those pitches down and in to a left handed hitter. 
+				Below is a diagram of the zones, to view it from the cather's perspective with a right handed hitter at 
+				the plate hit the Right-Handed Hitter button and to view from the cathers perspective with a left handed 
+				hitter at the plate hit the Left-Handed Hitter button. Please note it initializes to a Right Handed hitter 
+				at the plate</p>
+			<div id="strikezonerepresentation">
+				<img id="righty" src= "images/hitter1.png" alt="Right Handed Hitter">
+				<img id="szone" src= "images/Rplot.jpg" alt="The Strike Zone">
+				<img id="lefty" src= "images/hitter2.png" alt="Left Handed Hitter">
+			</div>
+			
+			<div id="strikezonebuttons">
+				<button id="rightbutton" type="button">Right Handed Batter</button>
+				<button id="leftbutton" type="button">Left Handed Batter</button>
+			</div>
+			<br>
+			<br>
+			<p> To work with our model we need to further specify pitch locations within each zone to use for prediction. 
+				To do this we catagorized pitches by zone(1-9) and then took the average over all pitches thrown to get the 
+				average x-y coordinate that allows us to predict over all zones.</p><br><p>These locations are:</p>
+			<ul>
+				<li> <b>Zone 1:  Right Handed Batter</b>-- px=-0.459594423 and pz=3.067349     
+					<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;<b>Left Handed Batter</b>-- px=-0.473925876 and pz=3.009223</li>
+				<li> <b>Zone 2:  Right Handed Batter</b>-- px=0.003531711 and pz=3.053637
+ 				   <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+ 				   &nbsp;<b>Left Handed Batter</b>-- px=-0.009724063 and pz=3.024239</li>
+				<li> <b>Zone 3:  Right Handed Batter</b>-- px=0.462094809 and pz=3.045527     
+					<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;<b>Left Handed Batter</b>-- px=0.453124385 and pz=3.028313</li>
+				<li> <b>Zone 4:  Right Handed Batter</b>-- px=-0.458214021 and pz=2.492985     
+					<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;<b>Left Handed Batter</b>-- px=-0.472936561 and pz=2.462434</li>
+				<li> <b>Zone 5:  Right Handed Batter</b>-- px=0.006584475 and pz=2.484429     
+					<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;<b>Left Handed Batter</b>-- px=-0.011609981 and pz=2.462940</li>
+				<li> <b>Zone 6:  Right Handed Batter</b>-- px=0.465529713 and pz=2.475680     
+					<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;<b>Left Handed Batter</b>-- px=0.454462353 and pz=2.470533</li>
+				<li> <b>Zone 7:  Right Handed Batter</b>-- px=-0.454992894 and pz=1.906814     
+					<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;<b>Left Handed Batter</b>-- px=-0.471791818 and pz=1.906965</li>
+				<li> <b>Zone 8:  Right Handed Batter</b>-- px=0.010848467 and pz=1.901359     
+					<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;<b>Left Handed Batter</b>-- px=-0.013375393 and pz=1.893271</li>
+				<li> <b>Zone 9:  Right Handed Batter</b>-- px=0.468019182 and pz=1.899994     
+					<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+					&nbsp;<b>Left Handed Batter</b>-- px=0.452305095 and pz=1.895448</li>
+			</ul>
+		</div>
+		<hr>
+		<div id="rates">
+			<h2>Calculating the Rates</h2>
+			<p> The second thing we need to discuss is how to calculate Home Run Rate, Walk Rate and Strikeout Rate. The 
+				definitions are as follows:</p>
+			<ul>
+				<li> Home Run Rate is defined as the number of home runs hit by the player over total player plate 
+					appearances</li>
+				<li> Walk Rate is defined as the number of walks a player draws over total player plate appearances</li>
+				<li> Strikeout Rate is defined as the number times a player strikes out over total player plate 
+					appearances</li>
+			 </ul>
+			 <p> A simple calculator for these rates is provided below. If a rate is within the major league averages the 
+				 "Within MLB Averages?" next to the textboox turns green, if higher than major league average it appears red. 
+				 <br></p>
+			<div id="ratescalc" role="form">
+				 Home Runs: <input id="HR" type="text" name="HR"><br>
+				 Strikeouts: <input id="SO" type="text" name="SO"><br>
+				 Walks: <input id="BB" type="text" name="BB"><br>
+				 Plate Appearances: <input id="PA" type="text" name="PA"><br><br>
+				 <button id="calculate" type="button">Calculate the Rates</button><br><br><br>
+				 Home Run Rate: <input id="HRR" type="text" name="HRR"><span id="HRROK"> Within MLB Averages?</span><br>
+				 Strikeout Rate: <input id="SOR" type="text" name="SOR"><span id="SOROK"> Within MLB Averages?</span><br>
+				 Walk Rate: <input id="BBR" type="text" name="BBR"><span id="BBROK"> Within MLB Averages?</span><br></div>
+				 <br>
+			<p> These rates can also be obtained by locating the player's statistics on either <a
+				 href="http://www.fangraphs.com/" target="_blank"> Fangraphs</a> or <a
+				 href="http://www.baseballreference.net/" target="_blank"> Baseball Reference</a>. Please keep in mind that 
+				 historical rates were used to fit the model, so historical rates should be used make predictions.</p>
+		</div>
+		<hr>
+		<div id='pitching'>
+			<h2>Obtaining Pitch Speed, Horizontal and Vertical Movement</h2>
+			<p> To obtain pitch speeds as well as horizontal and vertical movements for pitches, we recommend using <a
+				 href="http://www.brooksbaseball.net/" target="_blank">Brooks Baseball</a>. Once on the website look up the 
+				 player card for the required pitcher and there you can obtain the pitch speeds as well as the 
+				 corresponding movement.</p>
+			 
+	</main>
+	
+
+	<footer role="contentinfo">
+		<hr>
+		<br>
+		<p>Prepared for the 2015 College of Science Joint Annual Meeting</p>
+		<p>University of Notre Dame</p>
+		<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>	
+		<script type="text/javascript" src="finalproject.js"></script>
+	</footer>		
+</body>

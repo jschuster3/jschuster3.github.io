@@ -1,0 +1,579 @@
+
+ 	body, html {
+		margin:0; 
+		padding:0; 
+		font-size:100%; 
+	 	line-height:1.4em; 
+	 	font-family:sans-serif;
+		background-color:#B6C8E7;
+		
+		
+ 	}
+ 
+ 	p {
+		 margin:0 0 1em;
+ 	}
+	
+ 	.headerimg{
+		 background-size:cover;
+		 max-height:25em;
+		 width:100%;
+	 	 position: relative;
+		 padding-bottom:0px;
+	}
+	 
+	.mainheader{
+		 padding:5px;
+		 font-variant:small-caps;
+		 text-align: center;
+		 color:black;
+		 font-weight:bold;
+		 font-size:10px;
+	}
+	 
+	.mainheader2{
+		 display:none;
+	}
+	 
+ 	#navigation ul,
+	#resultsnavigation ul{
+		display: -webkit-flex;
+		display:flex;
+		-webkit-flex-direction:row;
+		flex-direction:row;
+		list-style-type: none;
+		padding-left:0em;
+		padding-right:0em;
+		padding-top:0em;
+	}
+	 
+	#navigation ul li,
+	#resultsnavigation ul li {
+		-webkit-flex: 1 0 0;
+		flex: 1 0 0;
+		text-align:center;
+		font-size:10px;
+		font-variant:small-caps;
+	}
+	
+	 
+    nav a {
+		 display:block;
+		 padding:1em 1em; 
+		 color:white; 
+		 background-color:#000080; 
+		 text-decoration:none;
+	}
+    
+	nav a:hover {
+		 background-color:#4278B4;
+	}
+	 
+	.active a {
+		  background-color:#4278B4;
+	}
+	  
+	#abstract{
+		  padding-top:3em;
+		  padding-right:3em;
+		  padding-left:3em;
+		  padding-bottom:5em;
+		  text-align:center;
+	}
+	
+	  
+	#abstract p {
+		  text-align:left;
+	}
+	
+	#authorabstract h2{
+		font-size:12px;
+		text-align:center;
+	}
+	
+	#ahead, 
+	#authorsabstract{
+		line-height:200%;
+	}
+	  
+	footer{
+		  text-align:center;
+		  font-variant:small-caps;
+		  color:white;
+		  padding-bottom:10px;
+	}
+	
+	  
+	#sox,
+	#cubs,
+	#yanks{
+		  width:75px;
+		  height:75px;
+	}
+	  
+	#js,
+	#jg,
+	#jd{
+		  padding-left: 5px;
+		  padding-right:5px;
+		  align:center;
+		  text-align:center;
+	}
+	  
+	#jamesS,
+	#jamesDs,
+	#joeG{
+		  max-width:90%;
+		  max-height:300px;
+	}
+	#jamesDs{
+		max-width:200px;
+	}
+	  
+	#catcher{
+		  width:200px;
+		  height:200px;
+		  float:right;
+		  
+	}
+	
+	#pitcher{
+		  width:200px;
+		  height:200px;
+
+	}
+	  
+	#backbutton,
+	#pitchbutton,
+	#rightbutton,
+	#leftbutton,
+	#calculate{
+		  padding:10px;
+		  text-size:14px;
+	}
+	  
+	#buttondiv{
+		  text-align:center;
+	}
+	  
+	#baseball{
+		  width:20px;
+		  height:20px;
+		  position:relative;
+		  left:-162px;
+		  bottom:162px;
+	}
+	   
+	#pitch{
+		  width:95%;
+		  padding-left:2.5%;
+		  padding-right:2.5;
+	}
+	  
+	#pitch,
+	#buttondiv{
+		display:none;
+	}
+	
+	#modelheader,
+	#model,
+	#covariatesheader{
+		text-align:center;
+	}
+	
+	#model{
+		padding-left:30px;
+		padding-right:30px;
+		font-variant:small-caps;
+	}
+	
+	#covariates{
+		padding-top:10px;
+		padding-bottom:100px;
+		padding-right:50px;
+		padding-left:50px;
+	}
+	
+	#modelfit,
+	#modelhead2{
+		padding-top:0px;
+		padding-bottom:100px;
+		padding-right:50px;
+		padding-left:50px;
+		text-align:center;
+	}
+	
+	#FIPoutcomes{
+		padding-left:100px;
+	}
+	
+	#backbutton{
+		display:none;
+	}
+	
+	#baseballroll{
+		display:none;
+	}
+	
+	#refhead{
+		text-align:center;
+	}
+	
+	#strikezonerepresentation,
+	#strikezonebuttons{
+		text-align:center;
+	}
+	
+	#lefty,
+	#righty{
+		max-width:30%;
+	}
+	
+	#szone{
+		max-width:13%;
+	}
+	
+	#lefty{
+		visibility:hidden;
+	}
+	
+	#ratescalc{
+		padding-left:50px;
+	}
+	#datadiv,
+	#refmaincontent,
+	#modelfits{
+		padding-top:10px;
+		padding-left:20px;
+		padding-right:20px;
+		padding-bottom:10px;
+	}
+	
+	
+	#ahead,
+	#aboutheader,
+	#modelheader,
+	#refhead,
+	#datahead,
+	#resultshead{
+		text-align:center;
+		font-variant:small-caps;
+		font-size:20px;
+	}
+	
+	footer{
+		background-image: url("images/footer_background_img.jpg");
+	}
+	
+	#strikezone1{
+		width:20%;
+	}
+
+	#thezone{
+		text-align:center;
+	}
+	
+	#results{
+		text-align:center;
+	}
+	#results img{
+		width:90%;
+	}
+	
+	#resultsnavigation ul li{
+		font-size:10px;
+	}
+	
+	pre{
+		font-size:8px;
+	}
+	
+	#results h3,
+	#results h4{
+		font-size:10px;
+	}
+	
+	#model{
+		font-size:24px;
+		line-height:150%;
+		font-weight:bold;
+	}
+	
+	#spdesc,
+	#fbdesc,
+	#fbdesc1,
+	#chdesc,
+	#cbdesc,
+	#sldesc{
+		align:center;
+		max-width:80%;
+	}
+	 
+	  
+ 	@media only screen and (min-width:515px){
+ 		.mainheader2{
+ 			display:initial;
+			border:1px solid black;
+			background-color:white;
+	 		position: absolute ;
+	 		top: 35px;
+	 		left: 35px;
+			text-align: center;
+			padding:5px;
+			font-weight:bold;
+			font-size:10px;
+		}
+   		 .mainheader{
+   	 	  	 display:none;
+   		 }
+	
+		 ul li {
+			 font-size:12px;
+		 }
+		
+		#authorsabstract h2{
+			font-size:14px;
+		}
+		
+ 	}
+ 
+ 	@media only screen and (min-width:700px){
+		 .mainheader2{
+			 font-size:16px;
+		 }
+		#navigation ul li {
+			 font-size:16px;
+		 }
+		#aboutheader,
+		#modelheader,
+		#refhead,
+		#datahead,
+		#resultshead{
+  		  	font-size:30px;
+	 	}
+	 
+	 	#js{
+		 float:left;
+		 width:47%;
+	 	}
+		 #jg{
+		 float:left;
+		 width:47%;
+		 }
+		 
+		 #jd{
+		 padding-top:750px;
+	 	}
+		
+		#pitch,
+		#buttondiv{
+			display:block;
+		}
+		
+		#ball{
+			visibility:initial;
+		}
+		
+		@-webkit-keyframes baseballmovement{
+			0% {left:0%;}
+			45%{-webkit-transform: rotate(1080deg);
+				left:95%;}
+			100%{-webkit-transform: rotate(-720deg);
+				left:0%;}
+		}
+		@-moz-keyframes baseballmovement{
+			0% {left:0%;}
+			45%{-moz-transform: rotate(1080deg);
+				left:95%;}
+			100%{-moz-transform: rotate(-720deg);
+				left:0%;}
+		}
+		@-o-keyframes baseballmovement{
+			0% {left:0%;}
+			45%{-o-transform: rotate(1080deg);
+				left:95%;}
+			100%{-o-transform: rotate(-720deg);
+				left:0%;}
+		}
+		@-ms-keyframes baseballmovement{
+			0% {left:0%;}
+			45%{-ms-transform: rotate(1080deg);
+				left:95%;}
+			100%{-ms-transform: rotate(-720deg);
+				left:0%;}
+		}
+		@keyframes baseballmovement{
+			0% {left:0%;}
+			45%{transform: rotate(1080deg);
+				left:95%;}
+			100%{transform: rotate(-720deg);
+				left:0%;}
+		}
+		
+		#baseballroll{
+			display:block;
+			width:50px;
+			position:relative;
+			-webkit-animation: baseballmovement 10s linear infinite;
+			-moz-animation: baseballmovement 10s linear infinite;
+			-o-animation:baseballmovement 10s linear infinite;
+			-ms-animation:baseballmovement 10s linear infinite;
+			animation: baseballmovement 10s linear infinite;
+		}
+		
+		#resultsnavigation ul li{
+			font-size:16px;
+		}
+		
+		pre{
+			font-size:14px;
+		}
+		#results div h2{
+			font-size:20px;
+		}
+		#results div h4,
+		#results div h3{font-size:15px;}
+		
+		#chapmantrout,
+		#chapmanstanton,
+		#chapmanrizzo,
+		#cuetotrout,
+		#cuetostanton,
+		#cuetorizzo,
+		#kershawtrout,
+		#kershawstanton,
+		#kershawrizzo,
+		#hernandeztrout,
+		#hernandezstanton,
+		#hernandezrizzo,
+		#tanakatrout,
+		#tanakastanton,
+		#tanakarizzo,
+		#wainwrighttrout,
+		#wainwrightstanton,
+		#wainwrightrizzo{
+			float:left;
+			width:48%;
+		}
+		
+		#chapmancabrera,
+		#chapmancano,
+		#chapmanbrantley,
+		#cuetocabrera,
+		#cuetocano,
+		#cuetobrantley,
+		#kershawcabrera,
+		#kershawcano,
+		#kershawbrantley,
+		#hernandezcabrera,
+		#hernandezcano,
+		#hernandezbrantley,
+		#tanakacabrera,
+		#tanakacano,
+		#tanakabrantley,
+		#wainwrightcabrera,
+		#wainwrightcano,
+		#wainwrightbrantley{
+			float:right;
+			width:48%;
+		}
+		
+		#tanakastanton,
+		#tanakarizzo,
+		#kershawrizzo,
+		#kersawstanton,
+		#cuetostanton,
+		#cuetorizzo,
+		#chapmanstanton,
+		#chapmanrizzo,
+		#hernandezstanton,
+		#hernandezrizzo,
+		#wainwrightrizzo,
+		#wainwrightstanton
+		#Chapman,
+		#Cueto,
+		#Kershaw,
+		#Hernandez,
+		#Tanaka,
+		#Wainwright,
+		#resultsfooter{clear:both;}
+		
+		#Chapman,
+		#Cueto,
+		#Kershaw,
+		#Hernandez,
+		#Tanaka,
+		#Wainwright{
+			padding-top:30px;
+		}
+ 	
+	 	#results img{
+	 		width:90%;
+	 	}
+		
+		#spdesc,
+		#fbdesc,
+		#fbdesc1,
+		#chdesc,
+		#cbdesc,
+		#sldesc{
+			max-width:50%;
+		}
+	}
+	 @media only screen and (min-width:1070px){
+		 .mainheader2{
+	 		 font-size:22px;
+	 	 }
+		 #navigation ul li {
+			 font-size:22px;
+		 }
+   	
+		#resultsnavigation ul li{
+			font-size:25px;
+		}
+		
+		#authorsabstract h2{
+			font-size:16px;
+		}
+		#model{
+			font-size:30px;
+		}
+	 
+	}
+	
+	@media only screen and (min-width:1240px){
+		
+		#aboutheader,
+		#modelheader,
+		#refhead,
+		#datahead,
+		#resultshead{
+  		  	font-size:36px;
+	 	 }
+		 #js{
+			 float:left;
+			 width:32%;
+		 }
+		 #jg{
+			 float:left;
+			 width:32%;
+		 }
+		 #jd{
+			 clear:none;
+			 padding-top:0px;
+			 float:left;
+			 width:32%;
+		 }
+		 #footer{clear:left;}
+		
+	 
+	 }
+	 
+	 @media only screen and (min-width:1350px){
+		 
+ 		#pitch,
+ 		#buttondiv{
+ 			display:none;
+ 		}
+  	}
+	
